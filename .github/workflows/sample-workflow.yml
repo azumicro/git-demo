@@ -1,0 +1,15 @@
+
+name: sample-workflow
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the master branch
+  push:
+    branches: [ master ]
+
+jobs:
+  explore-first-github-workflow:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Event name ${{github.event_name}}."
+      - run: echo "Job status ${{job.status}}."
